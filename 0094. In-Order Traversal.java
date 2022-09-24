@@ -17,6 +17,31 @@
  * }
  */
 
+// Iterative solution
+class Solution {
+    // In-order traversal goes left, root, right
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        
+        // root doesn't get used until all the left children are checked. A stack (LIFO) is good for this task.
+        Stack<TreeNode> stack = new Stack<>();
+        
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root); // Get the root in there first
+                root = root.left; // move on to left child 
+            }
+            
+            // At this point, we ran out of left children
+            root = stack.pop(); // Record the root value into res
+            res.add(root.val);
+            root = root.right; // Start looking for the right
+        } // this keeps going until the stack is empty
+        return res;
+    }
+    
+}
+
 
 /* Recursive Solution
 class Solution {
