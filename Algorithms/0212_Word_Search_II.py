@@ -39,7 +39,7 @@ class Solution:
             # Base case: 1. Out of bounds 2. When word is not found 3. When reached an explored element '.'
             if row < 0 or row >= m or col < 0 or col >= n or board[row][col] == '.' or board[row][col] not in cur.children: return
             
-            # Look for the current board character in the Trie children
+            # [?] Look for the current board character in the Trie children
             c = board[row][col]
             cur  = cur.children[c]
             if cur.word != '': ans.add(cur.word)
