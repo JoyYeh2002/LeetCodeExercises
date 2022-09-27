@@ -38,6 +38,7 @@ public:
         q.push(root);
         
         while (!q.empty()) {
+            // [?] How do the sizes change?
             auto size = q.size();
             for (auto i = 0; i < size; i++) {
                 // Examine the top element in queue
