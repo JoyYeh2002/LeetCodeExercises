@@ -1,4 +1,3 @@
-
 /**
  * 0021. Merge Two Sorted Lists
  * Move 3 pointers at once.
@@ -24,7 +23,7 @@ class Solution {
         // When both have elements
         while (ptr1 != null && ptr2 != null) {
             // Choose which to place, move their pointers if successful
-            if(ptr1.val < ptr2.val){
+            if (ptr1.val < ptr2.val) {
                 ptr.next = new ListNode(ptr1.val);
                 ptr1 = ptr1.next;
             } else {
@@ -46,7 +45,6 @@ class Solution {
         return head.next;
     }
 }
-
 
 /*
 class Solution {
@@ -82,7 +80,6 @@ class Solution {
         } else {
             ptr.next = cur2;
         }
-        
         return head;
     }
 }
