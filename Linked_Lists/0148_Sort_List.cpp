@@ -1,5 +1,6 @@
 /**
  * 0148. Sort List
+ * Using merge sort!!
  * Return the linked list in ascending order
  *
  * Input: head = [-1,5,3,4,0]
@@ -48,6 +49,7 @@ public:
         return mergeList(L1, L2);
     }
     
+    // Merge all the single nodes by chaining them depending on values
     ListNode* mergeList(ListNode *L1, ListNode *L2) {
         ListNode *ptr = new ListNode(0);
         ListNode *curr = ptr;
