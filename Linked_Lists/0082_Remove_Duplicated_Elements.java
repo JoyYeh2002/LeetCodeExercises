@@ -24,29 +24,34 @@ class Solution {
         ListNode newNode = new ListNode();
         newNode.next = head;
 
-        // Temp node
+        // Temp node is the virtual head
         ListNode temp = newNode;
 
         // ptr1 and ptr2 must exist
         while (temp.next != null && temp.next.next != null) {
-          ListNode first = temp.next;
-          ListNode second = temp.next.next;
+            // "first" starts at the head
+            ListNode first = temp.next;
+            ListNode second = temp.next.next;
 
-          // Skip all the equal pairs
-          if (first.val == second.val) {
-            while (second != null && first.val == second.val) {
-              second = second.next;
-            }
+            // Skip all the equal pairs and go to the next ones
+            if (first.val == second.val) {
+                while (second != null && first.val == second.val) {
+                    second = second.next;
+                }
 
-            // Re-link at the broken node
-            temp.next = second;
+                // Re-link at the broken node once found an un-equal node
+                // [temp] --> [first] --> 3 --> 3 --> [second] 
+                //   1           3                       4    
+                //   1 --> 4
+                temp.next = second;
 
-            // Keep going
-            continue;
-          }
+                // Keep going
+                continue;
+            } 
 
-          // Curr element becomes ptr1
-          temp = first;
+            // Now temp --> second are definitely not the same. Move on.
+            // [?] why?
+            temp = first;
         }
 
         // Return the actual head from virtual head
