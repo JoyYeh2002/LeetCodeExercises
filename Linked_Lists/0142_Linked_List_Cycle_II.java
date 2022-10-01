@@ -43,7 +43,6 @@ public class Solution {
     */
         
     // We can already determine the presence of a cycle at this step
-    
     if (slow == fast) {
         // temp is the original head
         while (slow.next != temp) {
@@ -53,11 +52,9 @@ public class Solution {
         // But if they clash again, we can return temp and know the cycle position
         return temp;
     }
-    return null;
-           
+    return null;    
     }
 }
-
 
 /*
 public class Solution {
