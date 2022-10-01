@@ -61,7 +61,7 @@ public:
             // Insert from the fast element
             slow -> next = fast;
             
-            // Move on (jump to the address)
+            // Move on (jump to the stored address)
             slow = temp;
             
             // temp now saves the next fast (keep the fast address)
