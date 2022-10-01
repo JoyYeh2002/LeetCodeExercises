@@ -19,7 +19,6 @@ class Solution {
         ListNode dummy = new ListNode(0); 
         dummy.next = head;
         
-        
         // Move prev all the way to the L flip edge
         ListNode prev = dummy; 
         for(int i = 0; i < left - 1; i++)
@@ -29,6 +28,16 @@ class Solution {
         ListNode curr = prev.next; 
         
         // Reverse (R - L) number of times
+        /* [3] --> [4] --> [5] --> [6]
+         * curr    next   next.next
+         *
+         * [3] --> [5]
+         * [4] --> [3] --> [5] next.next = prev.next
+         * [2] --> [4] --> [3] --> [5] prev.next = next
+         * prev            curr    next
+         * [2] --> [6] --> [5] --> [4] --> [3] --> [18]
+         *                         curr   next.next
+         */
         for (int i = 0; i < right - left; i++) {
             ListNode next = curr.next; 
             
