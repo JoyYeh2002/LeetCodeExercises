@@ -5,6 +5,11 @@
  *
  * Split into 2 dummy lists and then concatenate them
  * Cycles might appear!
+ * L: [2] --> [3] --> [4] -- [6] --
+ *                                |
+ * --------------------------------
+ * |
+ * R: [10] --> [13] --> [15] --> NULL
  *
  * Definition for singly-linked list.
  * public class ListNode {
@@ -33,7 +38,7 @@ class Solution {
         
         // Traverse the entire list
         while (head != null) {
-            // Partition into L or R based on x value
+            // Partition into L or R based on x value comparison
             if (head.val < x) {
                 Lptr.next = head;
                 Lptr = Lptr.next;
@@ -55,8 +60,6 @@ class Solution {
         return L.next;
     }
 }
-
-
 
 /*
 class Solution {
