@@ -11,7 +11,7 @@ class Solution:
       size = len(queue)
       for _ in range(size):
         node = queue.popleft() # this is a dequeue operation
-        if (step == k) and.append(node)
+        if (step == k) ans.append(node)
         if node.right:
           queue.append(node.right)
         if node.left:
