@@ -2,21 +2,15 @@
 # Updated 10.22.2022#
 
 # 01. User Input
-```# -*- coding: utf-8 -*-
-"""
+
 PYthon Exercise 01: Character Inputs
 
-- datetime
-- input
-- convert str() and int()
+- datetime, input, convert str() and int()
 
 - datetime.datetime.today().year
 - [var] = input("prompt")
 
-Created on Sat Oct 22 13:13:12 2022
-
-@author: Joy
-"""
+```
 import datetime
 
 name = input("What is your name?")
