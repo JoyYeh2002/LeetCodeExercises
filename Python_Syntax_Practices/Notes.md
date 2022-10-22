@@ -1,5 +1,5 @@
 # Notes for Basic Python Syntax and Programming#
-# Updated 10.22.2022#
+- Updated 10.22.2022
 
 # 01. User Input
 
