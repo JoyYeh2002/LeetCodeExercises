@@ -101,7 +101,6 @@ sys.exit()
 # 4. List Printing: print(*list)
 
 ```
-
 num = 27
 options = range(1, num+1)
 # print(*options, sep = ", ")
